@@ -1,0 +1,17 @@
+<html>
+<head><title>LED SWITCH</title></head>
+<body style="background-color:lightblue;">
+<h3>Which LED you want?</h3>
+<form action="/cgi-bin/radio.py" method="POST";text-align:center><!--%The ACTION attribute specifies the URL of the CGI program that will process the form information. You are not limited to using a CGI program on your server to decode form information; you can specify a URL of a remote host if a program that does what you want is available elsewhere. For us "cgi-bin" is where all our cgi code is held.-->
+  <input type="radio" name="LEDoption" value="LED1" checked> Blue <br>
+  <input type="radio" name="LEDoption" value="LED2"> Green<br>
+  <input type="radio" name="LEDoption" value="LED3"> Red <br>
+  <input type="submit" value="Submit LED Selection">
+</form>
+
+<h3>What Brightness you want?</h3>
+<form action="/cgi-bin/range.py" method="POST">
+  <input type="range" name="slider1" min="0" max="100" value="50"/><br>
+  <input type="submit" value="Submit Brightness Value">
+</form>
+</html>
